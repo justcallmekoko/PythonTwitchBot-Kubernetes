@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-twitch-bot
+  labels:
+    app: python-twitch-bot
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: python-twitch-bot
+  template:
+    metadata:
+      labels:
+        app: python-twitch-bot
+    spec:
+      containers:
+        - name: python-twitch-bot-container
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          env:
+          - name: ADMIN_USER
+            value: {{ .Values.adminuser }}
+          - name: TWITCH_TOKEN
+            value: {{ .Values.twitchtoken }}
+          - name: API_TOKEN
+            value: {{ .Values.apitoken }}
+          - name: CLIENT_ID
+            value: {{ .Values.clientid }}
+          - name: NICK
+            value: "{{ .Values.nick }}"
+          - name: PREFIX
+            value: "{{ .Values.prefix }}"
+          - name: INITIAL_CHANNELS
+            value: "{{ .Values.initialchannels }}"
