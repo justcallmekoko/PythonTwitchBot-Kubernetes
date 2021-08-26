@@ -1,0 +1,14 @@
+replicaCount: 1
+
+image:
+  repository: "justcallmekoko/dockerpythontwitchbot"
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+adminuser: twitchusername
+twitchtoken: oauth
+apitoken: twitchapitoken
+clientid: clientidtoken
+nick: "twitchusername"
+prefix: "commandprefix"
+initialchannels: "twitchchannelname"
