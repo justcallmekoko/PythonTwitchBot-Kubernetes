@@ -9,6 +9,6 @@ entries:
     name: python-twitch-bot
     type: application
     urls:
-    - https://justcallmekoko.github.io/PythonTwitchBot/python-twitch-bot-0.1.0.tgz
+    - https://justcallmekoko.github.io/PythonTwitchBot-Kubernetes/python-twitch-bot-0.1.0.tgz
     version: 0.1.0
 generated: "2021-08-26T04:00:51.304461866+01:00"
